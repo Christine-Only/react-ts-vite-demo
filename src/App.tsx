@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Suspense, lazy } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-const App = () => {
-  const [count, setCount] = useState(0)
+const Select = lazy(() => import('./antd/Select'))
 
-  return <div className="App">我是app</div>
-}
+const App = () => (
+  <Router>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/select" element={<Select />} />
+      </Routes>
+    </Suspense>
+  </Router>
+)
 
 export default App
