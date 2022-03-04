@@ -1,3 +1,7 @@
-body {
-  padding: 24px 80px;
+#root {
+  height: 100%;
+}
+
+#root > section {
+  height: 100%;
 }
