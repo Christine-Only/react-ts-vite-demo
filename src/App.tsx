@@ -1,5 +1,5 @@
-import { Suspense, lazy } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from './layouts';
 
@@ -9,13 +9,14 @@ const Bing = lazy(() => import('./Bing'));
 const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
-      <Layout />
-      <Routes>
-        <Route path="/select" element={<Select />} />
-        <Route path="/bing" element={<Bing />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/select" element={<Select />} />
+          <Route path="/bing" element={<Bing />} />
+        </Routes>
+      </Layout>
     </Suspense>
   </Router>
 );
 
-export default App
+export default App;

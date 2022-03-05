@@ -1,10 +1,30 @@
+import React from 'react'
+
+const useRef = React.lazy(() => import('../react/useRef'))
+const Select = React.lazy(() => import('../antd/Select'))
+
+
 export const routes = [
   {
-    path: '/useRef',
-    name: 'useRef',
+    name: 'React',
+    path: '/react',
+    children: [
+      {
+        path: '/useRef',
+        name: 'useRef',
+        component: useRef
+      },
+    ]
   },
   {
-    path: '/select',
-    name: 'Select',
-  },
+    name: 'antd',
+    path: '/antd',
+    children: [
+      {
+        path: '/select',
+        name: 'Select',
+        component: Select
+      },
+    ]
+  }
 ];

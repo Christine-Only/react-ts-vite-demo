@@ -5,3 +5,7 @@
 #root > section {
   height: 100%;
 }
+
+#root > section .ant-layout-header {
+  background: #389e0d;
+}
