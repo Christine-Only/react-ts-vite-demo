@@ -3,7 +3,7 @@ import { useRef } from 'react';
 const UseRef = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const handleClick = () => {
-    inputRef.current.focus();
+    inputRef?.current?.focus();
   };
   return (
     <>

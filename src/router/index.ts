@@ -1,6 +1,6 @@
 import React from 'react'
 
-const useRef = React.lazy(() => import('../react/useRef'))
+const useRef = React.lazy(() => import('../pages/react/useRef'));
 const Select = React.lazy(() => import('../antd/Select'))
 
 

@@ -7,6 +7,16 @@ const config = ({ mode }: { mode: string }): Plugin => {
     name: 'config',
     config() {
       return {
+        cacheDir: '.vite',
+        build: {
+          rollupOptions: {
+            input: {
+              main: path.resolve(__dirname, '..', 'index.html'),
+              heathCheck: path.resolve(__dirname, '..', 'health.html'),
+            },
+          },
+          outDir: path.resolve(__dirname, '..', 'dist'),
+        },
         resolve: {
           alias: {
             '@/': `${path.resolve(process.cwd(), 'src')}/`,

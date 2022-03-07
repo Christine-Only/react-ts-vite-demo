@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build:dev": "vite build --mode dev",
     "preview": "vite preview",
     "lint": "eslint src/**/*.{js,ts,tsx}",
     "prepare": "husky install",
