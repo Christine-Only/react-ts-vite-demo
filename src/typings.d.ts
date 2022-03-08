@@ -9,5 +9,7 @@ declare namespace CommonType {
     item: React.ReactInstance;
     domEvent: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>;
   }
+
+  type Route = { name: string; path: string; component?: React.ReactDOM; children?: CommonRoute[] };
 }
 

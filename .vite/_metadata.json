@@ -1,0 +1,36 @@
+{
+  "hash": "ceccbdae",
+  "browserHash": "3364b951",
+  "optimized": {
+    "react": {
+      "file": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/.vite/react.js",
+      "src": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/node_modules/react/index.js",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "file": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/.vite/react-dom.js",
+      "src": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/node_modules/react-dom/index.js",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "file": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/.vite/react-router-dom.js",
+      "src": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/node_modules/react-router-dom/index.js",
+      "needsInterop": false
+    },
+    "antd": {
+      "file": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/.vite/antd.js",
+      "src": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/node_modules/antd/es/index.js",
+      "needsInterop": false
+    },
+    "@ant-design/icons": {
+      "file": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/.vite/@ant-design_icons.js",
+      "src": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/node_modules/@ant-design/icons/es/index.js",
+      "needsInterop": false
+    },
+    "react/jsx-dev-runtime": {
+      "file": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/.vite/react_jsx-dev-runtime.js",
+      "src": "/Users/christinesy.tang/Desktop/react-ts-vite-demo/node_modules/react/jsx-dev-runtime.js",
+      "needsInterop": true
+    }
+  }
+}

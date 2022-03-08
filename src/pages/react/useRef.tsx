@@ -1,15 +1,25 @@
-import { useRef } from 'react';
+import { useRef, useState, createRef } from 'react';
 
 const UseRef = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
-  const handleClick = () => {
-    inputRef?.current?.focus();
-  };
+  const refFromCreateRef = createRef();
+  const refFromUseRef = useRef<number>();
+  const [count, setCount] = useState(1);
+
+  if (!refFromCreateRef.current) {
+    refFromCreateRef.current = count;
+  }
+
+  if (!refFromUseRef.current) {
+    refFromUseRef.current = count;
+  }
+
   return (
     <>
-      <input ref={inputRef} />
-      <button type="button" onClick={handleClick}>
-        Focus Input
+      <div>当前值：{count}</div>
+      <div>refFromCreateRef：{refFromCreateRef.current}</div>
+      <div>refFromUseRef：{refFromUseRef.current}</div>
+      <button type="button" onClick={() => setCount((prev) => prev + 1)}>
+        重新渲染
       </button>
     </>
   );
