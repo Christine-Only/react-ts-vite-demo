@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #parent {
+      background-color: hotpink;
+    }
+
+    #child {
+      width: 400px;
+      background: greenyellow;
+    }
+
+    #sun {
+      width: 200px;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    父亲
+    <div id="child">
+      儿子
+      <div id="sun">孙子</div>
+    </div>
+  </div>
+</body>
+<script>
+  // 第一次执行
+  document.getElementById("parent").addEventListener("click", function () {
+    alert(`parent 事件触发，` + this.id);
+  });
+
+  document.getElementById("child").addEventListener("click", function () {
+    alert(`child 事件触发，` + this.id);
+  });
+
+  document.getElementById("sun").addEventListener("click", function () {
+    alert(`sun 事件触发，` + this.id);
+  });
+
+  // 第二次执行
+  // document.getElementById("parent").addEventListener("click", function (e) {
+  //   alert(`parent 事件触发，` + e.target.id);
+  // });
+
+  // document.getElementById("child").addEventListener("click", function (e) {
+  //   alert(`child 事件触发，` + e.target.id);
+  // });
+
+  // 第三次执行
+  // document.getElementById("parent").addEventListener("click", function (e) {
+  //   alert(`parent 事件触发，` + e.target.id);
+  // }, true);
+
+  // document.getElementById("child").addEventListener("click", function (e) {
+  //   alert(`child 事件触发，` + e.target.id);
+  // }, true);
+
+  // document.getElementById("sun").addEventListener("click", function (e) {
+  //   alert(`sun 事件触发，` + e.target.id);
+  // }, true);
+
+  // 点击 id 为 child 的 div 后，以上代码的执行结果分别是什么？
+
+  // 拓展
+  // document.getElementById("parent").addEventListener("click", function (e) {
+  //   alert(`parent 事件触发，` + e.target.id);
+  // }, false);
+
+  // document.getElementById("child").addEventListener("click", function (e) {
+  //   alert(`child 事件触发，` + e.target.id);
+  // }, true);
+
+  // document.getElementById("sun").addEventListener("click", function (e) {
+  //   alert(`sun 事件触发，` + e.target.id);
+  // }, true);
+
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>复制粘贴功能</div>
+</body>
+<script>
+  const selection = window.getSelection();
+  const range = document.createRange();
+  const element = document.querySelector('div');
+
+  // RangeAPI: 制造区域
+  range.selectNodeContents(element);
+
+  // Selection: 选中区域
+  selection.addRange(range);
+
+  selectedText = selection.toString();
+  console.log('selectedText: ', selectedText);
+
+  async function readClipBoard() {
+    const res = await navigator.clipboard.readText()
+    console.log('读取', res);
+  }
+
+  async function writeClipBoard() {
+    const res = await navigator.clipboard.writeText('Hi，Christine')
+    console.log('写入', res);
+  }
+  writeClipBoard()
+
+  readClipBoard()
+
+  async function permission() {
+    const res = await navigator.permissions.query({ name: 'clipboard-read' })
+    console.log('===', res)
+  }
+
+  permission()
+
+
+</script>
+
+</html>

@@ -7,6 +7,7 @@ import { routes } from './router';
 const Select = lazy(() => import('./antd/Select'));
 const UseRef = lazy(() => import('./pages/react/useRef'));
 const Bing = lazy(() => import('./Bing'));
+const LazyLoad = lazy(() => import('./pages/html/lazyLoad'));
 
 const Redirect = ({ to }: { to: string }) => {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/useRef" element={<UseRef />} />
           <Route path="/select" element={<Select />} />
           <Route path="/bing" element={<Bing />} />
+          <Route path="/lazyLoad" element={<LazyLoad />} />
         </Routes>
       </Layout>
     </Suspense>

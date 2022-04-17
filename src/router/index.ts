@@ -2,6 +2,7 @@ import React from 'react'
 
 const useRef = React.lazy(() => import('../pages/react/useRef'));
 const Select = React.lazy(() => import('../antd/Select'))
+const LazyLoad = React.lazy(() => import('../pages/html/lazyLoad'))
 
 
 export const routes = [
@@ -24,6 +25,17 @@ export const routes = [
         path: '/select',
         name: 'Select',
         component: Select
+      },
+    ]
+  },
+  {
+    name: 'html',
+    path: '/html',
+    children: [
+      {
+        path: '/lazyLoad',
+        name: 'lazyLoad',
+        component: LazyLoad
       },
     ]
   }
