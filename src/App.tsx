@@ -6,6 +6,7 @@ import { routes } from './router';
 
 const Select = lazy(() => import('./antd/Select'));
 const UseRef = lazy(() => import('./pages/react/useRef'));
+const LifeCycle = lazy(() => import('./pages/react/lifeCycle'));
 const Bing = lazy(() => import('./Bing'));
 const LazyLoad = lazy(() => import('./pages/html/lazyLoad'));
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/" element={<Redirect to="/useRef" />} />
           {/* {RenderRoute(routes)} */}
           <Route path="/useRef" element={<UseRef />} />
+          <Route path="/lifeCycle" element={<LifeCycle />} />
           <Route path="/select" element={<Select />} />
           <Route path="/bing" element={<Bing />} />
           <Route path="/lazyLoad" element={<LazyLoad />} />

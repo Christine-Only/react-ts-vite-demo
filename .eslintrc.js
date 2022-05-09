@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    'airbnb',
+    // 'airbnb',
     // ts 关键字和类型的一些规则
     'plugin:@typescript-eslint/recommended',
     'prettier',
@@ -18,20 +18,17 @@ module.exports = {
   },
   rules: {
     /* ts */
-    'no-unused-expressions': [
-      'warn',
-      { allowShortCircuit: true, allowTernary: true },
-    ], // 允许 短路运算和三元运算 其他warning
+    'no-unused-expressions': ['warn', { allowShortCircuit: true, allowTernary: true }], // 允许 短路运算和三元运算 其他warning
     /* js */
     'max-len': ['error', { code: 150 }], // 最大行字符数
     semi: 'off', // 允许 行尾无分号
     /* react */
     'react-hooks/exhaustive-deps': 'off', // 允许 react-hooks 依赖不全
     'react/no-array-index-key': 'off', // 允许 用 index 做key
-    'react/function-component-definition': [
-      2,
-      { namedComponents: 'arrow-function' },
-    ], // 默认 用箭头函数定义函数组件
+    // 'react/function-component-definition': [
+    //   2,
+    //   { namedComponents: 'arrow-function' },
+    // ], // 默认 用箭头函数定义函数组件
     'react/jsx-filename-extension': 'off', // 允许 tsx里面不带类型定义
     'react/require-default-props': 'off', // 允许 没有默认值
     'react/react-in-jsx-scope': 'off', // 允许 React不带import React
@@ -49,4 +46,4 @@ module.exports = {
       typescript: {},
     },
   },
-}
+};

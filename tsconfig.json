@@ -22,9 +22,11 @@
     "jsx": "react-jsx",
     "typeRoots": [
       "./typings"
-    ]
+    ],
   },
   "include": [
+  ],
+  "exclude": [
     "src"
   ]
 }
